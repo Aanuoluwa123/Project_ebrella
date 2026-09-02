@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap');
 
+:root{
+    --cream: #eadccb;
+    --primary-brown: #6b4f3a;
+    --light-text: #666666;
+}
+
 /*navbar*/
 
 *{
@@ -699,5 +705,95 @@ footer{
 
     .admin-card{
         padding: 26px 22px;
+    }
+}
+
+
+/*contact page*/
+.contact-hero{
+    padding:100px 8% 70px;
+    background:var(--cream);
+}
+
+.contact-hero .section-title{
+    max-width:750px;
+    margin:auto;
+}
+
+.contact-section{
+    padding:80px 8%;
+    background:#fff;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contact-card{
+    width:280px;
+    padding:35px 25px;
+    text-align:center;
+    background:var(--cream);
+    border-radius:18px;
+    transition:.3s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact-icon{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.contact-card h2{
+    color:var(--primary-brown);
+    margin-bottom:12px;
+}
+
+.contact-card p{
+    color:var(--light-text);
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.contact-btn{
+    display:inline-block;
+    padding:11px 20px;
+    background:var(--primary-brown);
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    transition:.3s ease;
+}
+
+.contact-btn:hover{
+    opacity:.85;
+}
+
+.contact-cta{
+    padding:80px 8%;
+    background:var(--cream);
+}
+
+.contact-cta .section-title{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-cta h2{
+    font-family:'Playfair Display',serif;
+    color:var(--primary-brown);
+    font-size:2.4rem;
+}
+
+@media (max-width: 480px){
+    .contact-card{
+        width: 100%;
+        max-width: 320px;
     }
 }
