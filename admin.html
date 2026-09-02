@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebrella_stitches — Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="admin-page">
+
+        <section id="loginSection" class="admin-card">
+            <h1>Ebrella_stitches Admin</h1>
+            <p class="admin-sub">Log in to add or remove products.</p>
+
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <button onclick="login()">Log In</button>
+        </section>
+
+        <section id="adminSection" class="admin-card" style="display:none;">
+            <div class="admin-header">
+                <h1>Manage Products</h1>
+                <button class="admin-logout-btn" onclick="logout()">Log Out</button>
+            </div>
+
+            <h2>Add a new product</h2>
+            <input id="productName" type="text" placeholder="Product name (e.g. Leather Sling Bag)">
+
+            <select id="productCategory">
+                <option value="">Select category</option>
+                <option value="bags">Bags</option>
+                <option value="hats">Hats</option>
+                <option value="fascinators">Fascinators</option>
+                <option value="dresses">Dresses</option>
+            </select>
+
+            <input id="productPrice" type="number" placeholder="Price (₦)">
+
+            <label class="file-label">
+                Product photo
+                <input id="productImage" type="file" accept="image/*">
+            </label>
+
+            <button id="addProductBtn" onclick="addProduct()">Add Product</button>
+
+            <h2 class="admin-list-title">Current products</h2>
+            <div id="adminProductList"></div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
